@@ -1,7 +1,7 @@
 #include"Modlib.h"
 
 void zad1(int*&arr, int&n) {
-	std::cout << "Въведете n: ";
+	std::cout << "Enter n: ";
 	EnterNumber(n, 1, INT32_MAX);
 
 	if (arr != nullptr) {
@@ -60,7 +60,7 @@ void  zad5_1(int*&array, int n) {
 			}
 		}
 		else {
-			std::cout << "Проблем с разпределението на паметта!" << std::endl;
+			std::cout << "Could not allocate memory!" << std::endl;
 			}
 	//return 0;
 }
@@ -73,12 +73,12 @@ void zad5(int*&array, int n) {
 				std::cout << 1 << "/" << i << " = " << array[i] << std::endl;
 			}
 			else {
-				std::cout <<1<< "/"<<i<<" Не може да се изчисли!" << std::endl;
+				std::cout <<1<< "/"<<i<<" is not divisible!" << std::endl;
 			}
 		}
 	}
 	else {
-		std::cout << "Паметта не е разпределена" << std::endl;
+		std::cout << "Could not allocate memory!" << std::endl;
 	}
 	//return 0;
 }
@@ -89,11 +89,11 @@ void zad6(int*array, int n, int a) {
 			std::cout << "1/" << a << " = " << array[a] << std::endl;
 		}
 		else {
-			std::cout << "1/" << a << " не може да се изчисли!" << std::endl;
+			std::cout << "1/" << a << " is not divisible!" << std::endl;
 		}
 	}
 	else {
-		std::cout << "Грешка в разпределянето на памет!" << std::endl;
+		std::cout << "Could not allocate memory!" << std::endl;
 	}
 	//return 0;
 }
@@ -130,7 +130,7 @@ void zad7(int n, int a){
 			std::cout << "1/" << a << " = " << table[3][cnt + 1] << std::endl;
 		}
 		else {
-			std::cout << "1/" << a << " не се дели!" << std::endl;
+			std::cout << "1/" << a << " is not divisible!" << std::endl;
 		}
 
 		for (int i = 0; i < 4; i++) {
@@ -140,7 +140,7 @@ void zad7(int n, int a){
 
 	}
 	else {
-		std::cout << "проблем със заделянето на памет!" << std::endl;
+		std::cout << "Problem with memory allocation!" << std::endl;
 	}
 
 }
@@ -156,7 +156,7 @@ void zad8(int*&array, int n, int a, int b) {
 		}
 	}
 	else {
-		std::cout << "Грешка в разпределението на памет!" << std::endl;
+		std::cout << "Could not allocate memory!" << std::endl;
 	}
 	//return 0;
 }
@@ -175,7 +175,7 @@ void zad9(int *arr, int n, int num, int exponent){
 
 		if (num == 1 || exponent == 1) {
 			if (n == 1) {
-				std::cout << "Операцията не може да се изчисли!" << std::endl;
+				std::cout << "Can not be calculated!" << std::endl;
 				return;
 			}
 			new_num = 1;
@@ -212,7 +212,7 @@ void zad9(int *arr, int n, int num, int exponent){
 		}
 		if (negative) {
 			if (arr[new_num] == -1) {
-				std::cout << "Не може да се изчисли!" << std::endl;
+				std::cout << "Can not be calculated!" << std::endl;
 				return;
 			}
 			else {
@@ -220,11 +220,11 @@ void zad9(int *arr, int n, int num, int exponent){
 			}
 
 		}
-		std::cout << num << " повдигнато на степен " << ((negative) ? "-" : "") << exponent << " е равно на: " << new_num << std::endl;
+		std::cout << num << " to the power of " << ((negative) ? "-" : "") << exponent << " is: " << new_num << std::endl;
 
 	}
 	else {
-		std::cout << "Не може да се задели памет!" << std::endl;
+		std::cout << "Could not allocate memory!" << std::endl;
 	}
 	return;
 }
@@ -237,6 +237,6 @@ void zad14(int n) {
 			break;
 		}
 	}
-	std::cout << "Z(" << n << ") " << ((prime) ? "e " : "не е ") << "крайно поле!\n";
+	std::cout << "Z(" << n << ") " << ((prime) ? "is " : "is not ") << "finite field!\n";
 	//return 0;
 }

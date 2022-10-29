@@ -4,7 +4,7 @@
 #include"Modlib.h"
 using namespace std;
 int main() {
-	setlocale(LC_ALL, "bulgarian");
+	//setlocale(LC_ALL, "bulgarian");
 	int option, n = 0;
 	int**arr = new int*[2];
 	arr[0] = arr[1] = nullptr;
